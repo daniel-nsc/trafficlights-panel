@@ -77,7 +77,7 @@ export class TrafficLightCtrl extends MetricsPanelCtrl {
       for(var i =0;i<this.series.length;i++)
       {
         var newserie={
-          "name":this.series[i].label,
+          "name":this.series[i].label.split('|')[0],
           "value":this.series[i].datapoints.slice(-1)[0][0]
         }
 
