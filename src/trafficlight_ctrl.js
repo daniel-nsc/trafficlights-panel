@@ -25,7 +25,10 @@ const panelDefaults = {
     renderLink:false,
     linkUrl: "",
     linkTooltip: "",
-    linkTargetBlank:false
+    linkTargetBlank:false,
+    splitLabel: false,
+    splitLabelPart: 0,
+    splitLabelDelm: "|"
   }
 };
 
@@ -76,10 +79,17 @@ export class TrafficLightCtrl extends MetricsPanelCtrl {
 
       for(var i =0;i<this.series.length;i++)
       {
-        var newserie={
-          "name":this.series[i].label.split('|')[0],
-          "value":this.series[i].datapoints.slice(-1)[0][0]
-        }
+	if(this.panel.trafficLightSettings.splitLabel){
+        	var newserie={
+        	  "name":this.series[i].label.split(this.panel.trafficLightSettings.splitLabelDelm)[this.panel.trafficLightSettings.splitLabelPart],
+        	  "value":this.series[i].datapoints.slice(-1)[0][0]
+        	}
+	}else{
+        	var newserie={
+        	  "name":this.series[i].label,
+        	  "value":this.series[i].datapoints.slice(-1)[0][0]
+        	}
+	}
 
         if(this.series[i].datapoints.length>1)
         {
