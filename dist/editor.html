@@ -49,9 +49,9 @@
 	<div class="section gf-form-group">
 		<h5 class="section-heading">Label</h5>
 		<gf-form-switch class="gf-form" label="Enable Label Split" label-class="width-12" checked="ctrl.panel.trafficLightSettings.splitLabel" on-change="ctrl.render()"></gf-form-switch>
-		<div class="gf-form" ng-show="!ctrl.panel.trafficLightSettings.splitLabel">
+		<div class="gf-form" ng-show="ctrl.panel.trafficLightSettings.splitLabel">
 			<label class="gf-form-label width-12">Delimeter</label>
-			<input type="number" class="input-small gf-form-input max-width-10" ng-model="ctrl.panel.trafficLightSettings.splitLabelDelm" ng-change="ctrl.render()" ng-model-onblur>
+			<input type="text" class="input-small gf-form-input max-width-10" ng-model="ctrl.panel.trafficLightSettings.splitLabelDelm" ng-change="ctrl.render()" ng-model-onblur>
 
 			<label class="gf-form-label width-12">Part</label>
 			<input type="number" class="input-small gf-form-input max-width-10" ng-model="ctrl.panel.trafficLightSettings.splitLabelPart" ng-change="ctrl.render()" ng-model-onblur>
