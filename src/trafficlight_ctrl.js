@@ -82,7 +82,7 @@ export class TrafficLightCtrl extends MetricsPanelCtrl {
 	if(this.panel.trafficLightSettings.splitLabel){
 		var label_name = ""
 
-		var label_parts = this.panel.trafficLightSettings.splitLabelPart.split[',']
+		var label_parts = this.panel.trafficLightSettings.splitLabelPart.split(',')
 
 		var label_split = this.series[i].label.split(this.panel.trafficLightSettings.splitLabelDelm)
 
