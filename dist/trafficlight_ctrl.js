@@ -177,6 +177,7 @@ System.register(['app/plugins/sdk', 'moment', 'lodash', 'app/core/time_series', 
               }
             } catch (e) {
               // This is not a time serie
+              console.log(e);
               this.series = [];
               for (var i = 0; i < dataList[0].rows.length; i++) {
                 var newserie = {

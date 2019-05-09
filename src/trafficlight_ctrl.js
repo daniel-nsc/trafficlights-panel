@@ -130,6 +130,7 @@ export class TrafficLightCtrl extends MetricsPanelCtrl {
     catch(e)
     {
       // This is not a time serie
+      console.log(e);
       this.series=[];
       for(var i=0;i<dataList[0].rows.length;i++)
       {
