@@ -145,11 +145,11 @@ System.register(['app/plugins/sdk', 'moment', 'lodash', 'app/core/time_series', 
 
                   var label_split = this.series[i].label.split(this.panel.trafficLightSettings.splitLabelDelm);
 
-                  for (var i = 0; i < label_parts.length; i++) {
-                    if (i == 0) {
-                      label_name += label_split[label_parts[i]];
+                  for (var l = 0; l < label_parts.length; l++) {
+                    if (l == 0) {
+                      label_name += label_split[label_parts[l]];
                     } else {
-                      label_name += this.panel.trafficLightSettings.splitLabelJoiner + label_split[label_parts[i]];
+                      label_name += this.panel.trafficLightSettings.splitLabelJoiner + label_split[label_parts[l]];
                     }
                   }
 
