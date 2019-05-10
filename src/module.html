@@ -1,7 +1,7 @@
 <div class="trafficlight-panel" ng-style="{height: ctrl.height}" class="traffic-light-vis">
    <div class="traffic-light-vis" ng-repeat="line in ctrl.lines">
       <div ng-repeat="metric in line" class="traffic-light-box" ng-style="{'width':ctrl.percentPerLight+'%'}">
-         <div class="traffic-light-container" ng-style="{'width': ctrl.panel.trafficLightSettings.width+'px', 'height': (2.68 * ctrl.panel.trafficLightSettings.width)+'px' }">
+         <div class="traffic-light-container" ng-style="{'height': ctrl.panel.trafficLightSettings.width+'px', 'width': (2.68 * ctrl.panel.trafficLightSettings.width)+'px' }">
             <div class="traffic-light">
               <a ng-href="{{ ctrl.panel.trafficLightSettings.renderLink ? ctrl.renderLink(ctrl.panel.trafficLightSettings.linkUrl, metric, encodeURIComponent) : '' }}"
                   target="{{ctrl.panel.trafficLightSettings.linkTargetBlank ? '_blank' : '_self'}}"
