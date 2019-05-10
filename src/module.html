@@ -8,7 +8,7 @@
                   data-placement="right"
                   class="{{ ctrl.panel.trafficLightSettings.renderLink ? '' : 'traffic-light-empty-href'}}"
                   bs-tooltip="{{ ctrl.panel.trafficLightSettings.renderLink && ctrl.panel.trafficLightSettings.linkTooltip != '' ? '\'' +   ctrl.renderLink(ctrl.panel.trafficLightSettings.linkTooltip, metric) + '\'' : '' }}">
-                  <div class="light red" ng-class="{'on':
+                  <div class="light red" style="padding-left: 7%;" ng-class="{'on':
                      (!ctrl.panel.trafficLightSettings.invertScale && ((metric.value <= ctrl.panel.trafficLightSettings.redThreshold) || (metric.value >= ctrl.panel.trafficLightSettings.max)))
                      || (ctrl.panel.trafficLightSettings.invertScale && metric.value >= ctrl.panel.trafficLightSettings.redThreshold) }">
                   </div>
