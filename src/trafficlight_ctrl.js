@@ -28,7 +28,7 @@ const panelDefaults = {
     linkTargetBlank:false,
     splitLabel: false,
     splitLabelPart: "0",
-    splitLabelDelm: "|",
+    splitLabelDelm: "[,]",
     splitLabelJoiner: " - "
   }
 };
@@ -84,7 +84,7 @@ export class TrafficLightCtrl extends MetricsPanelCtrl {
 
 		var label_parts = this.panel.trafficLightSettings.splitLabelPart.split(',')
 
-		var label_split = this.series[i].label.split(this.panel.trafficLightSettings.splitLabelDelm)
+		var label_split = this.series[i].label.split(new RegExp(this.panel.trafficLightSettings.splitLabelDelm, 'g'))
 
 
 		for(var l=0; l<label_parts.length; l++){
