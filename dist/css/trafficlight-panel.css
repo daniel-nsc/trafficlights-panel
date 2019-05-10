@@ -97,6 +97,9 @@
   background-color: #000;
   display: inline-block;
 }
+.traffic-light-vis .traffic-light-container .traffic-light .light.red {
+  margin-left: 7%;
+}
 .traffic-light-vis .traffic-light-container .traffic-light .light.on.red {
   background-color: #d9534f;
 }
