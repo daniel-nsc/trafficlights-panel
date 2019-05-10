@@ -87,6 +87,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  padding-left: 10%;
   background-color: #333;
 }
 .traffic-light-vis .traffic-light-container .traffic-light .light {
@@ -98,7 +99,6 @@
   display: inline-block;
 }
 .traffic-light-vis .traffic-light-container .traffic-light .light.on.red {
-  margin-left: 7%;
   background-color: #d9534f;
 }
 .traffic-light-vis .traffic-light-container .traffic-light .light.on.yellow {
